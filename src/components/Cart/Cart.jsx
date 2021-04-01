@@ -16,7 +16,7 @@ const Cart = ({ cart }) => {
         </Typography>
     )
 
-    const FilledCart = () => {
+    const FilledCart = () => (
         <>
             <Grid container spacing={3}>
                 {cart.line_items.map((item) => (
@@ -36,12 +36,13 @@ const Cart = ({ cart }) => {
                     </div>
             </div>
         </>
-    }
+    )
 
     return (
         <Container>
             <div className={classes.toolbar} />
             <Typography className={classes.title} variant="h3" gutterBottom >Check out the cool t's in your cart!</Typography>
+            {/* <FilledCart /> */}
             { isEmpty ? <EmptyCart /> : <FilledCart />}
         </Container>
     )
