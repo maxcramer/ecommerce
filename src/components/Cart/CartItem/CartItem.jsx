@@ -9,9 +9,9 @@ const CartItem = ({ item }) => {
         <Card>
             <CardMedia image={item.media.source} alt={item.name} className={classes.media} />
             <CardContent className={classes.cardContent}>
-                <Typography variant="h4">{item.name}</Typography>
-                <Typography variant="h5">{item.line_total.formatted_with_symbol}</Typography>
-                <CardActions className={classes.CardActions}>
+                <Typography variant="h5">{item.name}</Typography>
+                <Typography variant="h6">{item.line_total.formatted_with_symbol}</Typography>
+                <CardActions className={classes.cartActions}>
                     <div className={classes.buttons}>
                         <Button type="button" size="small">-</Button>
                         <Typography>{item.quantity}</Typography>
